@@ -52,27 +52,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        String haha = savedInstanceState.getString("tv1");
-        String hahaha = savedInstanceState.getString("et1");
-        int hahahaha = savedInstanceState.getInt("tv11");
-        int hahahahaha = savedInstanceState.getInt("et11");
-        tv1.setText(haha);
-        et1.setText(hahaha);
-        tv1.setBackgroundColor(hahahaha);
-        et1.setBackgroundColor(hahahahaha);
+        String tvtext = savedInstanceState.getString("tv1");
+        String ettext = savedInstanceState.getString("et1");
+        int tvbg = savedInstanceState.getInt("tv11");
+        int etbg = savedInstanceState.getInt("et11");
+        tv1.setText(tvtext);
+        et1.setText(ettext);
+        tv1.setBackgroundColor(tvbg);
+        et1.setBackgroundColor(etbg);
 
     }
-    //   protected void OnSaveInstanceState(){
-   //     SharedPreferences simpleAppInfo = getSharedPreferences("ActivityOneInfo", Context.MODE_PRIVATE);
-    //    SharedPreferences.Editor editor = simpleAppInfo.edit();
-     //   editor.putString("edtText", et1.getText().toString());
-      //  editor.putString("edtText", et1.getText().toString());
-       // editor.putString("edtText", tv1.getBackground().toString());
-        //editor.putString("txtView", tv1.getBackground().toString());
-        //editor.apply();
 
-      //  Toast.makeText(this, "Shared Preference Data Updated.", Toast.LENGTH_LONG).show();
-   // }
         public void onClick(View view){
             switch(view.getId()){
                 case R.id.cb_red:
